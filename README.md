@@ -105,9 +105,12 @@ Evaluate the model on the test dataset:
 ![image](https://github.com/Shaharak88/Shoes-Project/assets/95345116/3050582f-d3f5-4dfc-8452-3bf9f29414c3)
 
 
-#Results
+# Results
 Men's Shoes example:
+
 Accuracy: 81.7
+
 Women's Shoes example:
+
 Accuracy: 83.3
 
