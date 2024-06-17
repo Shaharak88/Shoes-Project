@@ -35,48 +35,76 @@ from ML_DL_Functions3 import CNN, CNNChannel
 
 model = CNN()  # For standard CNN
 or
+
 model = CNNChannel()  # For the modified input CNN
 
 # Prepare your data and run the model:
 
 
 input_data = torch.randn(1, 3, 448, 224)  # Example input data
+
 output = model(input_data)
+
 print(output)
+
 #Model Architecture
 # CNN
 The CNN class implements a standard convolutional neural network with the following layers:
 
+
 Four convolutional layers with ReLU activation and max pooling.
+
 Two fully connected layers to produce the final classification.
+
 # CNNChannel
 The CNNChannel class processes the input differently by splitting the input image along the height dimension and concatenating the halves along the channel dimension before passing it through a similar architecture as CNN.
 
 #Training
 Prepare your training and validation datasets.
+
 Define your loss function and optimizer:
+
 criterion = nn.CrossEntropyLoss()
+
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+
 #Train the model:
+
 for epoch in range(num_epochs):
+
     for inputs, labels in train_loader:
+    
         optimizer.zero_grad()
+        
         outputs = model(inputs)
+        
         loss = criterion(outputs, labels)
+        
         loss.backward()
+        
         optimizer.step()
+        
 # Evaluation
+
 Evaluate the model on the test dataset:
+
 model.eval()
+
 with torch.no_grad():
+
     for inputs, labels in test_loader:
+    
         outputs = model(inputs)
+        
         _, predicted = torch.max(outputs, 1)
+        
         # Calculate accuracy and other metrics
+        
 #validation:
 ![image](https://github.com/Shaharak88/Shoes-Project/assets/95345116/6cd4e1a2-1ebb-496c-a721-3022e1de995a)
 
 #Results
+
 Example results for shoe classification:
 
 Sample Image	Predicted Class	Actual Class
