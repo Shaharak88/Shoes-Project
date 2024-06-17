@@ -114,3 +114,10 @@ Women's Shoes example:
 
 Accuracy: 83.3
 
+# Example for Men's Shoes the model classifid correctly (The shoes are the same pair, but the model classified them as not the same pair.):
+    display(1,test_m_data)
+    
+![image](https://github.com/Shaharak88/Shoes-Project/assets/95345116/f9713230-7be9-46dd-819d-f5f59fa99c7e)
+
+# Example for Men's Shoes the model classifid incorrectly (The shoes are the same pair, but the model classified them as not the same pair.):
+![image](https://github.com/Shaharak88/Shoes-Project/assets/95345116/6f1ce4dc-74af-47af-9cc7-ec19b1debb0e)
