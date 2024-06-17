@@ -13,9 +13,7 @@ Evaluation
 
 Results
 
-Contributing
 
-License
 
 
 # Installation
