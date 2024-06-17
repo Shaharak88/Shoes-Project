@@ -1,6 +1,6 @@
 # Shoe Classification using Convolutional Neural Networks (CNN)
 This project aims to classify women's and men's shoes using Convolutional Neural Networks (CNN). The provided code includes two main classes: CNN and CNNChannel, both implemented in PyTorch. The CNN class handles standard CNN operations, while the CNNChannel class modifies the input to separate and process shoe images in a specific manner.
-Table of Contents
+# Table of Contents
 Installation
 Usage
 Model Architecture
