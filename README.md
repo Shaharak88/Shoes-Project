@@ -37,15 +37,9 @@ or
     model = CNNChannel()  # For the modified input CNN
 
 # Prepare your data and run the model:
+detailed in the "ML_DL_Assignmment.ipynp" file
 
-
-    input_data = torch.randn(1, 3, 448, 224)  # Example input data
-    
-    output = model(input_data)
-    
-    print(output)
-
-#Model Architecture
+# Model Architecture
 # CNN
 The CNN class implements a standard convolutional neural network with the following layers:
 
