@@ -59,7 +59,7 @@ Two fully connected layers to produce the final classification.
 # CNNChannel
 The CNNChannel class processes the input differently by splitting the input image along the height dimension and concatenating the halves along the channel dimension before passing it through a similar architecture as CNN.
 
-#Training
+# Training
 Prepare your training and validation datasets.
 
 Define your loss function and optimizer:
@@ -68,7 +68,7 @@ Define your loss function and optimizer:
     
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
-#Train the model:
+# Train the model:
 
 
     for epoch in range(num_epochs):
@@ -100,20 +100,14 @@ Evaluate the model on the test dataset:
         _, predicted = torch.max(outputs, 1)
         
         # Calculate accuracy and other metrics
-        
-#validation:
-![image](https://github.com/Shaharak88/Shoes-Project/assets/95345116/6cd4e1a2-1ebb-496c-a721-3022e1de995a)
+# validation:
+
+![image](https://github.com/Shaharak88/Shoes-Project/assets/95345116/3050582f-d3f5-4dfc-8452-3bf9f29414c3)
+
 
 #Results
+Men's Shoes example:
+Accuracy: 81.7
+Women's Shoes example:
+Accuracy: 83.3
 
-Example results for shoe classification:
-
-Sample Image	Predicted Class	Actual Class
-Men's Shoe	Men's Shoe
-Women's Shoe	Women's Shoe
-Accuracy Graph
-
-Loss Graph
-
-Contributing
-Contributions are welcome! Please fork this repository and submit pull requests.
