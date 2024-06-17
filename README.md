@@ -33,19 +33,19 @@ from ML_DL_Functions3 import CNN, CNNChannel
 # Initialize the model:
 
 
-model = CNN()  # For standard CNN
+    model = CNN()  # For standard CNN
 or
 
-model = CNNChannel()  # For the modified input CNN
+    model = CNNChannel()  # For the modified input CNN
 
 # Prepare your data and run the model:
 
 
-input_data = torch.randn(1, 3, 448, 224)  # Example input data
-
-output = model(input_data)
-
-print(output)
+    input_data = torch.randn(1, 3, 448, 224)  # Example input data
+    
+    output = model(input_data)
+    
+    print(output)
 
 #Model Architecture
 # CNN
@@ -63,34 +63,35 @@ The CNNChannel class processes the input differently by splitting the input imag
 Prepare your training and validation datasets.
 
 Define your loss function and optimizer:
-
-criterion = nn.CrossEntropyLoss()
-
-optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+    
+    criterion = nn.CrossEntropyLoss()
+    
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
 #Train the model:
 
-for epoch in range(num_epochs):
 
-    for inputs, labels in train_loader:
-    
-        optimizer.zero_grad()
+    for epoch in range(num_epochs):
+
+        for inputs, labels in train_loader:
         
-        outputs = model(inputs)
-        
-        loss = criterion(outputs, labels)
-        
-        loss.backward()
-        
-        optimizer.step()
+            optimizer.zero_grad()
+            
+            outputs = model(inputs)
+            
+            loss = criterion(outputs, labels)
+            
+            loss.backward()
+            
+            optimizer.step()
         
 # Evaluation
 
 Evaluate the model on the test dataset:
 
-model.eval()
-
-with torch.no_grad():
+    model.eval()
+    
+    with torch.no_grad():
 
     for inputs, labels in test_loader:
     
