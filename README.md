@@ -19,8 +19,9 @@ Results
 # Installation
 Clone the repository:
 
-git clone https://github.com/Shaharak88/Shoes-Project.git
-cd Shoes-Project
+    git clone https://github.com/Shaharak88/Shoes-Project.git
+    
+    cd Shoes-Project
 
 
 # Usage
