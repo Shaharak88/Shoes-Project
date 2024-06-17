@@ -9,53 +9,47 @@ Evaluation
 Results
 Contributing
 License
-Installation
+
+# Installation
 Clone the repository:
 
-sh
-Copy code
 git clone https://github.com/Shaharak88/Shoes-Project.git
 cd Shoes-Project
 
 
-Usage
+# Usage
 Import the necessary modules and classes:
 
 import torch
 from ML_DL_Functions3 import CNN, CNNChannel
-Initialize the model:
+# Initialize the model:
 
-python
-Copy code
+
 model = CNN()  # For standard CNN
-# or
+or
 model = CNNChannel()  # For the modified input CNN
-Prepare your data and run the model:
 
-python
-Copy code
+# Prepare your data and run the model:
+
+
 input_data = torch.randn(1, 3, 448, 224)  # Example input data
 output = model(input_data)
 print(output)
-Model Architecture
-CNN
+#Model Architecture
+# CNN
 The CNN class implements a standard convolutional neural network with the following layers:
 
 Four convolutional layers with ReLU activation and max pooling.
 Two fully connected layers to produce the final classification.
-CNNChannel
+# CNNChannel
 The CNNChannel class processes the input differently by splitting the input image along the height dimension and concatenating the halves along the channel dimension before passing it through a similar architecture as CNN.
 
-Training
+#Training
 Prepare your training and validation datasets.
 Define your loss function and optimizer:
-python
-Copy code
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
-Train the model:
-python
-Copy code
+#Train the model:
 for epoch in range(num_epochs):
     for inputs, labels in train_loader:
         optimizer.zero_grad()
@@ -63,17 +57,18 @@ for epoch in range(num_epochs):
         loss = criterion(outputs, labels)
         loss.backward()
         optimizer.step()
-Evaluation
+# Evaluation
 Evaluate the model on the test dataset:
-python
-Copy code
 model.eval()
 with torch.no_grad():
     for inputs, labels in test_loader:
         outputs = model(inputs)
         _, predicted = torch.max(outputs, 1)
         # Calculate accuracy and other metrics
-Results
+#validation:
+![image](https://github.com/Shaharak88/Shoes-Project/assets/95345116/6cd4e1a2-1ebb-496c-a721-3022e1de995a)
+
+#Results
 Example results for shoe classification:
 
 Sample Image	Predicted Class	Actual Class
